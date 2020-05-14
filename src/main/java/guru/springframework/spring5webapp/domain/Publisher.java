@@ -17,6 +17,7 @@ public class Publisher {
     private String zip;
 
     @OneToMany
+    @JoinColumn(name = "publisher_id")
     private Set<Book> publishedBooks = new HashSet<>();
 
     public Publisher() {
@@ -95,7 +96,7 @@ public class Publisher {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
-                ", publishedBooks=" + publishedBooks +
+                //", publishedBooks=" + publishedBooks +
                 '}';
     }
 
